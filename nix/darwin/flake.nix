@@ -71,6 +71,7 @@
 					"go"
 					"rust"
 					"thefuck"
+					"bat"
 				];
 				casks = [
 					"anaconda"
