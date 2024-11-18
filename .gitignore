@@ -1,0 +1,2 @@
+# ignore common macOS files
+.DS_Store
