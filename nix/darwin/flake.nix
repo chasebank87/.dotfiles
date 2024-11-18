@@ -44,9 +44,18 @@
 				done
 						'';
 			
+			# Misc Settings
 			system.defaults = {
 				dock.autohide = true;
 			};
+
+			# Finder settings
+			system.defaults.finder = {
+				FXPreferredViewStyle = "clmv";
+				ShowPathbar = true;
+				ShowStatusBar = true;
+			};
+
 
 			homebrew = {
 				enable = true;
@@ -56,6 +65,12 @@
 					"ntfy"
 					"pandoc"
 					"starship"
+					"neofetch"
+					"eza"
+					"zoxide"
+					"go"
+					"rust"
+					"thefuck"
 				];
 				casks = [
 					"anaconda"
