@@ -36,6 +36,7 @@ alias ls='eza --icons=always'
 alias cd='z'
 alias cat='bat'
 alias nfu='cd ~/.dotfiles/.config/nix && nix flake update && darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook && source ~/.zshrc && cd ~/.dotfiles && git add . && git commit -m "Nix Flake Update" && git push origin main'
+alias nfr='cd ~/.dotfiles/.config/nix && darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook && source ~/.zshrc'
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
 
