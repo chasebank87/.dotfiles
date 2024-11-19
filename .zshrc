@@ -3,6 +3,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export PATH=/usr/local/anaconda3/bin:$PATH
 export PATH=/opt/homebrew/anaconda3/bin:$PATH
 
+# Add the script to modify PAM configuration for sudo watchid
+# source ~/.scripts/add_pam_watchid.zsh
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
