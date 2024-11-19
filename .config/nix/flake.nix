@@ -24,7 +24,7 @@
   {
     darwinConfigurations."m4macbook" = nix-darwin.lib.darwinSystem {
       inherit system;
-      specialArgs = { inherit dotfiles; };
+      specialArgs = { inherit dotfiles self; };
       modules = [ 
         ./configuration.nix
         nix-homebrew.darwinModules.nix-homebrew
@@ -51,7 +51,6 @@
                 file = {
                   ".zshrc".source = "${dotfiles}/.zshrc";
                   ".config/starship".source = "${dotfiles}/.config/starship";
-                  ".config/nix".source = "${dotfiles}/.config/nix";
                 };
               };
 

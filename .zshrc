@@ -35,6 +35,7 @@ ZVM_INIT_MODE=sourcing
 alias ls='eza --icons=always'
 alias cd='z'
 alias cat='bat'
+alias nfu='cd ~/.dotfiles/.config/nix && nix flake update && darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook'
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
 

@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, self, ... }: {
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = [ 
     pkgs.vim
@@ -86,6 +86,7 @@
   };
 
   nix.settings.experimental-features = "nix-command flakes";
+  system.configurationRevision = self.rev or self.dirtyRev or null;
   system.stateVersion = 5;
   nixpkgs.hostPlatform = "aarch64-darwin";
 }
