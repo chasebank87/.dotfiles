@@ -20,8 +20,8 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1732048990,
-        "narHash": "sha256-l4DChV3MR9NUHqn7V1mrZczEfc591djkGul2vVnLmGg=",
+        "lastModified": 1732049208,
+        "narHash": "sha256-61tFL3GgAO3vVl7nDQcRIQL5ARX5yx861t6RVIVCVwU=",
         "path": "/Users/chase/.dotfiles",
         "type": "path"
       },

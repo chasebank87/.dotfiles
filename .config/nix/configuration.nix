@@ -59,6 +59,7 @@
       "thefuck"
       "bat"
       "nushell"
+      "wget"
     ];
     casks = [
       "anaconda"
