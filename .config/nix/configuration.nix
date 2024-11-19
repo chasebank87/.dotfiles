@@ -60,6 +60,7 @@
       "bat"
       "nushell"
       "wget"
+      "pam-reattach"
     ];
     casks = [
       "anaconda"
