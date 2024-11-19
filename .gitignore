@@ -1,5 +1,2 @@
 # ignore common macOS files
 .DS_Store
-
-# ignore nix lock files
-*.lock
