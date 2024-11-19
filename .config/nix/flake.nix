@@ -56,7 +56,11 @@
 
               programs = {
                 home-manager.enable = true;
-                git.enable = true;
+                git = {
+                  enable = true;
+                  userName = "chasebank87";
+                  userEmail = "chase@chaseelder.com";
+                };
               };
 
               xdg.enable = true;
