@@ -55,12 +55,14 @@
       "zoxide"
       "go"
       "rust"
+      "zig"
       "lua"
       "thefuck"
       "bat"
       "nushell"
       "wget"
       "pam-reattach"
+      "glfw"
     ];
     casks = [
       "anaconda"
