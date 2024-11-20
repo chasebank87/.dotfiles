@@ -35,9 +35,23 @@ ZVM_INIT_MODE=sourcing
 alias ls='eza --icons=always'
 alias cd='z'
 alias cat='bat'
-#alias nfu='cd ~/.dotfiles/.config/nix && nix flake update && darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook && source ~/.zshrc && cd ~/.dotfiles && git add . && git commit -m "Nix Flake Update" && git push origin main'
-alias nfu='pushd ~/.dotfiles/.config/nix > /dev/null && nix flake update && darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook && source ~/.zshrc && cd ~/.dotfiles && git add . && git commit -m "Nix Flake Update" && git push origin main && popd > /dev/null'
-alias nfr='pushd ~/.dotfiles/.config/nix > /dev/null && darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook && source ~/.zshrc && popd > /dev/null'
+alias nfu='''
+pushd ~/.dotfiles/.config/nix > /dev/null
+nix flake update
+darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook
+source ~/.zshrc
+cd ~/.dotfiles
+git add .
+git commit -m "Nix Flake Update"
+git push origin main
+popd > /dev/null
+'''
+alias nfr='''
+pushd ~/.dotfiles/.config/nix > /dev/null
+darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook
+source ~/.zshrc
+popd > /dev/null
+'''
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
 
