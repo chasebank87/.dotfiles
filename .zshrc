@@ -36,7 +36,6 @@ ZVM_INIT_MODE=sourcing
 ## eza
 alias ls='eza --icons=always'
 
-
 ## zoxide
 alias cd='z'
 
