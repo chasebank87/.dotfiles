@@ -32,9 +32,18 @@ eval "$(zoxide init zsh)"
 ZVM_INIT_MODE=sourcing
 
 # Aliases
+
+## eza
 alias ls='eza --icons=always'
+
+
+## zoxide
 alias cd='z'
+
+## bat
 alias cat='bat'
+
+## Nix Flake Update
 alias nfu='''
 pushd ~/.dotfiles/.config/nix > /dev/null
 nix flake update
@@ -46,12 +55,16 @@ git commit -m "Nix Flake Update"
 git push origin main
 popd > /dev/null
 '''
+
+## Nix Flake Rebuild
 alias nfr='''
 pushd ~/.dotfiles/.config/nix > /dev/null
 darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook
 source ~/.zshrc
 popd > /dev/null
 '''
+
+## The Fuck
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
 
