@@ -38,6 +38,7 @@
 
   system.defaults.finder = {
     FXPreferredViewStyle = "clmv";
+    FXArrangeGroupViewBy = "dmod";
     ShowPathbar = true;
     ShowStatusBar = true;
   };
