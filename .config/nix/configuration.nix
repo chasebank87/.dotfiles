@@ -32,15 +32,24 @@
       done
     '';
 
-  system.defaults = {
-    dock.autohide = true;
+  system.defaults.dock = {
+    autohide = true;
+    persistent-apps = [
+      "Finder"
+    ];
+    persistent-others = [
+      "/Applications"
+      "~/Downloads"
+    ];
   };
 
   system.defaults.finder = {
     FXPreferredViewStyle = "clmv";
-    FXArrangeGroupViewBy = "dmod";
+    FXDefaultSearchScope = "SCcf";
+    NewWindowTarget = "Home";
     ShowPathbar = true;
     ShowStatusBar = true;
+    _FXSortFoldersFirst = true;
   };
 
   homebrew = {
