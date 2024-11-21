@@ -35,7 +35,22 @@
   system.defaults.dock = {
     autohide = true;
     persistent-apps = [
-      "Finder"
+      "/System/Library/CoreServices/Finder.app"
+      "/Applications/Warp.app"
+      "/Applications/Arc.app"
+      "/Applications/Cursor.app"
+      "/Applications/Obsidian.app"
+      "/Applications/Visual Studio Code.app"
+      "/System/Applications/Messages.app"
+      "/System/Applications/Mail.app"
+      "/System/Applications/Calendar.app"
+      "/System/Applications/FaceTime.app"
+      "/System/Applications/Maps.app"
+      "/System/Applications/Music.app"
+      "/System/Applications/Photos.app"
+      "/System/Applications/Reminders.app"
+      "/System/Applications/Settings.app"
+      "/System/Applications/iPhone Mirroring.app"
     ];
     persistent-others = [
       "/Applications"
