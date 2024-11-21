@@ -35,7 +35,6 @@
   system.defaults.dock = {
     autohide = true;
     persistent-apps = [
-      "/System/Library/CoreServices/Finder.app"
       "/Applications/Warp.app"
       "/Applications/Arc.app"
       "/Applications/Cursor.app"
