@@ -85,7 +85,6 @@
       "vmware-horizon-client"
       "warp"
       "yubico-yubikey-manager"
-      "wave"
     ];
     taps = [];
     onActivation.cleanup = "zap";
