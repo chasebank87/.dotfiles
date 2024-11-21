@@ -34,6 +34,7 @@
 
   system.defaults.dock = {
     autohide = true;
+    show-recents = false;
     persistent-apps = [
       "/Applications/Warp.app"
       "/Applications/Arc.app"
@@ -64,6 +65,7 @@
     ShowPathbar = true;
     ShowStatusBar = true;
     _FXSortFoldersFirst = true;
+    FXEnableExtensionChangeWarning = false;
   };
 
   homebrew = {
