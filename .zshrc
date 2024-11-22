@@ -38,8 +38,9 @@ function ls() {
     query=$1
     if [ -z "$query" ]; then
         nu -c "ls -l"
+    else
+        nu -c "ls -l | $query"
     fi
-    nu -c "ls -l |$query"
 }
 #alias ls='nu -c "ls -l"'
 
