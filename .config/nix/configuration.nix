@@ -49,12 +49,11 @@
       "/System/Applications/Music.app"
       "/System/Applications/Photos.app"
       "/System/Applications/Reminders.app"
-      "/System/Applications/Settings.app"
       "/System/Applications/iPhone Mirroring.app"
     ];
     persistent-others = [
       "/Applications"
-      "~/Downloads"
+      "/Users/chase/Downloads"
     ];
   };
 
@@ -111,6 +110,7 @@
       "vmware-horizon-client"
       "warp"
       "yubico-yubikey-manager"
+      "kitty"
     ];
     taps = [];
     onActivation.cleanup = "zap";
