@@ -88,6 +88,7 @@
       "wget"
       "pam-reattach"
       "glfw"
+      "jc"
     ];
     casks = [
       "anaconda"
