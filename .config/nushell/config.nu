@@ -26,6 +26,7 @@ source ~/.cache/zoxide/.zoxide.nu
 # Disabled since it breaks nushell data structure
 # alias ls = eza --icons=always
 alias cat = bat
+alias cd = z
 
 # Run neofetch at startup
 neofetch
