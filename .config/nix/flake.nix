@@ -53,6 +53,7 @@
                   ".config/starship".source = "${dotfiles}/.config/starship";
                   ".config/neofetch".source = "${dotfiles}/.config/neofetch";
                   ".config/kitty".source = "${dotfiles}/.config/kitty";
+                };
               };
 
               programs = {
