@@ -7,14 +7,14 @@ $env.XDG_CONFIG_HOME = $"($env.HOME)/.config"
 $env.STARSHIP_CONFIG = $"($env.HOME)/.config/starship/starship.toml"
 $env.BAT_THEME = "Dracula"
 
-$env.PATH = (
-    $env.PATH | 
-    prepend [
-        "/usr/local/anaconda3/bin"
-        "/opt/homebrew/anaconda3/bin"
-        $"($env.HOME)/.cache/lm-studio/bin"
-    ]
-)
+#$env.PATH = (
+#    $env.PATH | 
+#    prepend [
+#        "/usr/local/anaconda3/bin"
+#        "/opt/homebrew/anaconda3/bin"
+#        $"($env.HOME)/.cache/lm-studio/bin"
+#    ]
+#)
 
 # Load starship
 use ~/.cache/starship/init.nu
