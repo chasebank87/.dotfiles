@@ -89,7 +89,7 @@ $env.NU_PLUGIN_DIRS = [
 use ~/.cache/starship/init.nu
 
 # Load zoxide
-use ~/.cache/zoxide/init.nu
+source ~/.cache/zoxide/.zoxide.nu
 
 # Add any additional environment configurations here
 

@@ -22,7 +22,7 @@ starship init nu | save -f ~/.cache/starship/init.nu
 
 # Zoxide (better cd) initialization
 mkdir ~/.cache/zoxide
-zoxide init nushell | save -f ~/.cache/zoxide/init.nu
+zoxide init nushell | save -f ~/.cache/zoxide/.zoxide.nu
 
 # Custom aliases
 # Disabled since it breaks nushell data structure
