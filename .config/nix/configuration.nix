@@ -111,6 +111,7 @@
       "warp"
       "yubico-yubikey-manager"
       "kitty"
+      "sublime-text"
     ];
     taps = [];
     onActivation.cleanup = "zap";
