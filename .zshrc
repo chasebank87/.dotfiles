@@ -34,12 +34,14 @@ ZVM_INIT_MODE=sourcing
 # Aliases
 
 ## nu ls
-function ls() {
-    query=$1
+function dq() {
+    cmd=$1
+    query=$2
+
     if [ -z "$query" ]; then
-        nu -c "ls -l"
+        nu -c "$cmd"
     else
-        nu -c "ls -l | $query"
+        nu -c "$cmd | $query"
     fi
 }
 #alias ls='nu -c "ls -l"'

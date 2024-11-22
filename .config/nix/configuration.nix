@@ -76,7 +76,6 @@
       "pandoc"
       "starship"
       "neofetch"
-      "eza"
       "zoxide"
       "go"
       "rust"
