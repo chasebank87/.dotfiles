@@ -86,10 +86,10 @@ $env.NU_PLUGIN_DIRS = [
 ]
 
 # Load starship
-source ~/.config/nushell/starship.nu
+use ~/.cache/starship/init.nu
 
 # Load zoxide
-source ~/.config/nushell/zoxide.nu
+use ~/.cache/zoxide/init.nu
 
 # Add any additional environment configurations here
 

@@ -18,10 +18,11 @@ $env.PATH = (
 
 # Initialize starship prompt
 mkdir ~/.cache/starship
-starship init nu | save -f ~/.cache/nushell/starship.nu
+starship init nu | save -f ~/.cache/starship/init.nu
 
 # Zoxide (better cd) initialization
-zoxide init nushell | save -f ~/.cache/nushell/zoxide.nu
+mkdir ~/.cache/zoxide
+zoxide init nu | save -f ~/.cache/zoxide/init.nu
 
 # Custom aliases
 # Disabled since it breaks nushell data structure
