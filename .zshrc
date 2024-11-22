@@ -33,8 +33,11 @@ ZVM_INIT_MODE=sourcing
 
 # Aliases
 
-## eza
-#alias ls='eza --icons=always'
+## nu ls
+function ls(query) {
+    nu -c "ls -l | $query"
+}
+#alias ls='nu -c "ls -l"'
 
 ## zoxide
 alias cd='z'
