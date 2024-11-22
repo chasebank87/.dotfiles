@@ -44,7 +44,6 @@ function dq() {
         nu -c "$cmd | $query"
     fi
 }
-#alias ls='nu -c "ls -l"'
 
 ## zoxide
 alias cd='z'
