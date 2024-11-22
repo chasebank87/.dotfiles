@@ -1,0 +1,63 @@
+code ~/.zshrc
+cursor zshrc
+cursor ~/.zshrc
+cd ~/.config/nushell/
+ls -l
+cursor .
+source ~/.config/nushell/config.nu
+ls -l
+ls
+source ~/.config/nushell/config.nu
+ls
+ls -l
+source ~/.config/nushell/config.nu
+ls -l
+source ~/.config/nushell/config.nu
+ls -l
+source ~/.config/nushell/config.nu
+mkdir ~/.config/zoxide
+source ~/.config/nushell/config.nu
+cd ~/.config/zoxide/
+ls -l
+source ~/.config/nushell/config.nu
+rm -rf ~/.config/zoxide/
+cd
+rm -rf ~/.config/zoxide/
+rm ~/.config/starship/starship.nu
+source ~/.config/nushell/config.nu
+exit
+ls
+source ~/.config/nushell/config.nu
+ls
+exit
+ls
+source ~/.config/nushell/config.nu
+exit\
+ls
+sudo echo "/run/current-system/sw/bin/nu" » /etc/shells
+cat /etc/shells
+which nu
+sudo echo "/opt/homebrew/bin/nu" >> /etc/shells
+cat /etc/shells
+exot
+exit
+nu
+ls
+sudo echo "/opt/homebrew/bin/nu" >> /etc/shells
+cat /etc/shells
+sudo vi /etc/shells
+cat /etc/shells
+chsh -s /opt/homebrew/bin/nu
+exit
+source ~/.config/nushell/config.nu
+ls
+exit
+ls -l
+ls -l | where type == dir
+ls -l | where name like 'Pipeline'
+ls -l | where name contains 'Pipeline'
+ls -l | where created <= 2
+ls -l | where created <= 2024-11-15
+ls -l | where created >= 2024-11-15
+ls -l | where created >= 2024-11-01
+exit
