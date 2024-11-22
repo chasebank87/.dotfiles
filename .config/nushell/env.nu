@@ -85,11 +85,15 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
 ]
 
-# Load starship
-use ~/.cache/starship/init.nu
+# Initialize starship prompt
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
 
-# Load zoxide
-source ~/.cache/zoxide/.zoxide.nu
+# Zoxide (better cd) initialization
+mkdir ~/.cache/zoxide
+zoxide init nushell | save -f ~/.cache/zoxide/.zoxide.nu
+
+
 
 # Add any additional environment configurations here
 
