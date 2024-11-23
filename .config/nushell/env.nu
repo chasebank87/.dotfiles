@@ -1,9 +1,9 @@
 # Environment variables
-$env.PATH = "/usr/local/anaconda3/bin:/opt/homebrew/anaconda3/bin:$env.PATH"
-$env.PATH = "/Users/chase/.cache/lm-studio/bin:$env.PATH"
-$env.PATH = "/opt/homebrew/bin:$env.PATH"
-$env.PATH = "/usr/bin:$env.PATH"
-
+$env.PATH = ($env.PATH | split row (char esep) | append '/usr/local/anaconda3/bin')
+$env.PATH = ($env.PATH | split row (char esep) | append '/opt/homebrew/anaconda3/bin')
+$env.PATH = ($env.PATH | split row (char esep) | append '/Users/chase/.cache/lm-studio/bin')
+$env.PATH = ($env.PATH | split row (char esep) | append '/opt/homebrew/bin')
+$env.PATH = ($env.PATH | split row (char esep) | append '/usr/bin')
 
 # Starship
 mkdir ~/.cache/starship
