@@ -6,3 +6,11 @@
 $env.XDG_CONFIG_HOME = $"($env.HOME)/.config"
 $env.STARSHIP_CONFIG = $"($env.HOME)/.config/starship/starship.toml"
 $env.BAT_THEME = "Dracula"
+
+
+$env.config = {
+
+  # Disable banner
+  show_banner: false,
+
+}
