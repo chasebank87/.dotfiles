@@ -31,7 +31,7 @@ export BAT_THEME="Dracula"
 eval "$(zoxide init zsh)"
 ZVM_INIT_MODE=sourcing
 
-# Aliases
+# Functions
 
 ## nu ls
 function dq() {
@@ -44,6 +44,11 @@ function dq() {
         nu -c "$cmd | $query"
     fi
 }
+
+# Aliases
+
+#
+alias ls='dq ls'
 
 ## zoxide
 alias cd='z'
