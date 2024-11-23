@@ -47,8 +47,8 @@ function dq() {
 
 # Aliases
 
-#
-alias ls='dq ls'
+## nu style ls
+alias ls='dq "ls -l"'
 
 ## zoxide
 alias cd='z'
