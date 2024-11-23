@@ -78,7 +78,7 @@ style = "bg:#ff79c6"
 disabled = false # Disabled by default
 
 [os.symbols]
-Macos = "[ ](fg:#3b3b3a)"
+Macos = "[ ](#3b3b3a)"
 
 [directory]
 style = "fg:#bd93f9"
