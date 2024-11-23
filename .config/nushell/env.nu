@@ -1,5 +1,5 @@
 # Environment variables
-$env.PATH = "/usr/local/anaconda3/bin:/opt/homebrew/anaconda3/bin:/Users/chase/.cache/lm-studio/bin:/opt/homebrew/bin:$env.PATH"
+#$env.PATH = "/usr/local/anaconda3/bin:/opt/homebrew/anaconda3/bin:/Users/chase/.cache/lm-studio/bin:/opt/homebrew/bin:$env.PATH"
 
 # Starship
 mkdir ~/.cache/starship
