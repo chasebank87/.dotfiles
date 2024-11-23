@@ -54,6 +54,8 @@
                   ".config/neofetch".source = "${dotfiles}/.config/neofetch";
                   ".config/kitty".source = "${dotfiles}/.config/kitty";
                   ".config/nushell".source = "${dotfiles}/.config/nushell";
+                  "Library/Application Support/nushell/config.nu".source = "${dotfiles}/.config/zoxide/pointer/config.nu";
+                  "Library/Application Support/nushell/env.nu".source = "${dotfiles}/.config/zoxide/pointer/env.nu";
                 };
               };
 
