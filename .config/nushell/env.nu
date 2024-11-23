@@ -2,7 +2,7 @@
 $env.PATH = "/usr/local/anaconda3/bin:/opt/homebrew/anaconda3/bin:$env.PATH"
 $env.PATH = "/Users/chase/.cache/lm-studio/bin:$env.PATH"
 $env.PATH = "/opt/homebrew/bin:$env.PATH"
-$env.PATH = "/usr/bin:$env.PATH"
+
 
 # Starship
 mkdir ~/.cache/starship
