@@ -19,4 +19,4 @@ $env.config = {
 use ~/.cache/starship/init.nu
 
 # Zoxide
-source ~/.cache/zoxide/init.nu
+source ~/.zoxide.nu
