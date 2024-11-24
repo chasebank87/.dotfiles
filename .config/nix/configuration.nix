@@ -112,6 +112,8 @@
       "yubico-yubikey-manager"
       "kitty"
       "sublime-text"
+      "geekbench"
+      "geekbench-ai"
     ];
     taps = [];
     onActivation.cleanup = "zap";
