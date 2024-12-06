@@ -114,6 +114,7 @@
       "sublime-text"
       "geekbench"
       "geekbench-ai"
+      "basictex"
     ];
     taps = [];
     onActivation.cleanup = "zap";
