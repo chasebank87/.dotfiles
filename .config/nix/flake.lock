@@ -20,8 +20,8 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1733626960,
-        "narHash": "sha256-tyAOyxQwcQtv7FpIBGw4o74WYiaV4sDwE6Px+lRBYtI=",
+        "lastModified": 1733939826,
+        "narHash": "sha256-td71GFSMAZsN0Hlyox06PxroL1YKlqe2+24aQ7x4OWE=",
         "path": "/Users/chase/.dotfiles",
         "type": "path"
       },
@@ -55,11 +55,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1733873195,
-        "narHash": "sha256-dTosiZ3sZ/NKoLKQ++v8nZdEHya0eTNEsaizNp+MUPM=",
+        "lastModified": 1734031102,
+        "narHash": "sha256-6RDywJJ1AuG2NflpXaWgNDYOOLGCqgTezUuc0RiEYzA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f26aa4b76fb7606127032d33ac73d7d507d82758",
+        "rev": "15151bb5e7d6e352247ecaeeeefc34d0f306b287",
         "type": "github"
       },
       "original": {
