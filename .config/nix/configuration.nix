@@ -118,7 +118,7 @@
     ];
     taps = [];
     masApps = {
-      "425264550" = "Blackmagic Disk Speed Test";
+      "Blackmagic Disk Speed Test" = "425264550";
     };
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
