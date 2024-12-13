@@ -117,6 +117,9 @@
       "basictex"
     ];
     taps = [];
+    masApps = {
+      "Blackmagic Disk Speed Test" = "425264550";
+    };
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
     onActivation.upgrade = true;
