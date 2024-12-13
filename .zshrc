@@ -39,9 +39,9 @@ function dq() {
     query=$2
 
     if [ -z "$query" ]; then
-        nu -c "$cmd"
+        nu -c "^$cmd"
     else
-        nu -c "$cmd | $query"
+        nu -c "^$cmd | $query"
     fi
 }
 
