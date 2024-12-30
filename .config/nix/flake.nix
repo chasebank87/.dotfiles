@@ -53,6 +53,7 @@
                   ".config/starship".source = "${dotfiles}/.config/starship";
                   ".config/neofetch".source = "${dotfiles}/.config/neofetch";
                   ".config/kitty".source = "${dotfiles}/.config/kitty";
+                  ".config/ghostty".source = "${dotfiles}/.config/ghostty";
                   ".config/nushell".source = "${dotfiles}/.config/nushell";
                   "Library/Application Support/nushell/config.nu".source = "${dotfiles}/.config/nushell/pointer/config.nu";
                   "Library/Application Support/nushell/env.nu".source = "${dotfiles}/.config/nushell/pointer/env.nu";
