@@ -116,6 +116,7 @@
       "geekbench-ai"
       "basictex"
       "transmission"
+      "ghostty"
     ];
     taps = [];
     onActivation.cleanup = "zap";
