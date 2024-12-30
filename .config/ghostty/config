@@ -2,4 +2,4 @@ theme=Dracula
 background-opacity=.4
 background-blur-radius=20
 window-padding-x=20,5
-window-decoration=false
+window-decoration=true
