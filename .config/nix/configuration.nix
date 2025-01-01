@@ -117,6 +117,7 @@
       "basictex"
       "transmission"
       "ghostty"
+      "surfshark"
     ];
     taps = [];
     onActivation.cleanup = "zap";
