@@ -107,7 +107,7 @@
       "setapp"
       "steam"
       "visual-studio-code"
-      "vmware-horizon-client"
+      "omnissa-horizon-client"
       "warp"
       "yubico-yubikey-manager"
       "kitty"
