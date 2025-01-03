@@ -88,6 +88,7 @@
       "pam-reattach"
       "glfw"
       "jc"
+      "freetype"
     ];
     casks = [
       "anaconda"
