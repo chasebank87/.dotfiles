@@ -93,6 +93,7 @@
     casks = [
       "anaconda"
       "arc"
+      "audacity"
       "cheatsheet"
       "cursor"
       "google-chrome"
