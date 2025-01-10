@@ -120,6 +120,7 @@
       "transmission"
       "ghostty"
       "surfshark"
+      "cinebench"
     ];
     taps = [];
     onActivation.cleanup = "zap";
