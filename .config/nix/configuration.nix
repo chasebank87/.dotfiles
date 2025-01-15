@@ -121,6 +121,7 @@
       "ghostty"
       "surfshark"
       "cinebench"
+      "superkey"
     ];
     taps = [];
     onActivation.cleanup = "zap";
