@@ -122,6 +122,7 @@
       "surfshark"
       "cinebench"
       "superkey"
+      "league-of-legends"
     ];
     taps = [];
     onActivation.cleanup = "zap";
