@@ -89,6 +89,7 @@
       "glfw"
       "jc"
       "freetype"
+      "powershell/tap/powershell"
     ];
     casks = [
       "anaconda"
@@ -124,7 +125,6 @@
       "superkey"
     ];
     taps = [
-      "powershell/tap/powershell"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
