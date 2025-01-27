@@ -90,6 +90,7 @@
       "jc"
       "freetype"
       "powershell/tap/powershell"
+      "openjdk"
     ];
     casks = [
       "anaconda"
