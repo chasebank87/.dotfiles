@@ -123,7 +123,9 @@
       "cinebench"
       "superkey"
     ];
-    taps = [];
+    taps = [
+      "powershell/tap/powershell"
+    ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
     onActivation.upgrade = true;
