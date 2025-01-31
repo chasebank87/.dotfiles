@@ -2,6 +2,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 export PATH=/usr/local/anaconda3/bin:$PATH
 export PATH=/opt/homebrew/anaconda3/bin:$PATH
+export PATH=/Users/chase/.cargo/bin:$PATH
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
