@@ -19,7 +19,12 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager, dotfiles }:
   let
     system = "aarch64-darwin";
-    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {
+        allowUnfree = true;
+      };
+    };
   in
   {
     darwinConfigurations."m4macbook" = nix-darwin.lib.darwinSystem {
@@ -30,12 +35,7 @@
         nix-homebrew.darwinModules.nix-homebrew
         home-manager.darwinModules.home-manager
         {
-          nixpkgs = {
-            pkgs = pkgs;
-            config = {
-              allowUnfree = true;
-            };
-          };
+          nixpkgs.pkgs = pkgs;
           
           nix-homebrew = {
             enable = true;
