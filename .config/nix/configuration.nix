@@ -1,6 +1,4 @@
 { config, pkgs, lib, self, ... }: {
-  nixpkgs.config.allowUnfree = true;
-
   security.pam.enableSudoTouchIdAuth = true;
 
   environment.systemPackages = [ 
