@@ -124,6 +124,7 @@
       "surfshark"
       "cinebench"
       "superkey"
+      "amphetamine"
     ];
     taps = [
     ];
