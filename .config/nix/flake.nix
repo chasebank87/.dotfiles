@@ -30,7 +30,12 @@
         nix-homebrew.darwinModules.nix-homebrew
         home-manager.darwinModules.home-manager
         {
-          nixpkgs.pkgs = pkgs;
+          nixpkgs = {
+            pkgs = pkgs;
+            config = {
+              allowUnfree = true;
+            };
+          };
           
           nix-homebrew = {
             enable = true;
