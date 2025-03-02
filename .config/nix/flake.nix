@@ -21,7 +21,7 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager, dotfiles }:
   let
     system = "aarch64-darwin";
-    secrets = import ./secrets.nix;
+    secrets = import (./secrets.nix);
     pkgs = import nixpkgs {
       inherit system;
       config = {
