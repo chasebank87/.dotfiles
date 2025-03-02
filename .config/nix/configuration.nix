@@ -11,7 +11,7 @@
       pam-watchid = super.stdenv.mkDerivation {
         name = "pam-watchid";
         src = super.fetchFromGitHub {
-          owner = "insidegui";
+          owner = "biscuitehh";
           repo = "pam-watchid";
           rev = "master";
           sha256 = "sha256-6islRMW5cbDwnN64kQQlHRv8cU2IkI4ZkmIrdc8GMiY="; # Updated to correct hash
