@@ -41,9 +41,9 @@
           nix.package = pkgs.nix;
           nix.settings = {
             experimental-features = [ "nix-command" "flakes" ];
-            auto-optimise-store = true;
             warn-dirty = false;
           };
+          nix.optimise.automatic = true;
           
           nix-homebrew = {
             enable = true;
