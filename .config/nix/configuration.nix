@@ -14,7 +14,7 @@
           owner = "insidegui";
           repo = "pam-watchid";
           rev = "master";
-          sha256 = "sha256-Ql6hxHx4GmPxkZiXJxqwp1s4VFf6CJ4KPYMVf3jOtMc="; # Updated hash
+          sha256 = "sha256-6islRMW5cbDwnN64kQQlHRv8cU2IkI4ZkmIrdc8GMiY="; # Updated to correct hash
         };
         buildPhase = "make";
         installPhase = "make install";
