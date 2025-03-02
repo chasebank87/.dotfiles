@@ -95,6 +95,7 @@
       "freetype"
       "powershell/tap/powershell"
       "openjdk"
+      "deno"
     ];
     casks = [
       "anaconda"
