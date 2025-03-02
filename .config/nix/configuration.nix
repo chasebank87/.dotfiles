@@ -16,8 +16,12 @@
           rev = "master";
           sha256 = "sha256-6islRMW5cbDwnN64kQQlHRv8cU2IkI4ZkmIrdc8GMiY="; # Updated to correct hash
         };
+        nativeBuildInputs = [ super.swift ];  # Add Swift as a build dependency
         buildPhase = "make";
-        installPhase = "make install";
+        installPhase = ''
+          mkdir -p $out/lib/pam
+          cp pam_watchid.so $out/lib/pam/
+        '';
       };
     })
   ];
