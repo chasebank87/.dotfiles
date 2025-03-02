@@ -6,7 +6,6 @@
     watchIdAuth = true;
   };
 
-  {
   nixpkgs.overlays = [
     (self: super: {
       pam-watchid = super.stdenv.mkDerivation {
