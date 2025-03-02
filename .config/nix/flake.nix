@@ -2,12 +2,12 @@
   description = "Chasebank87 nix-darwin system flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/8809585e6937d0b07fc066792c8c9abf9c3fe5c4";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     dotfiles = {
@@ -37,6 +37,13 @@
         home-manager.darwinModules.home-manager
         {
           nixpkgs.pkgs = pkgs;
+          
+          nix.package = pkgs.nix;
+          nix.settings = {
+            experimental-features = [ "nix-command" "flakes" ];
+            auto-optimise-store = true;
+            warn-dirty = false;
+          };
           
           nix-homebrew = {
             enable = true;
