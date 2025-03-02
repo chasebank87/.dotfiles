@@ -13,7 +13,7 @@
   ];
 
   fonts.packages = [
-    (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })
+    pkgs.nerd-fonts.hack
   ];
 
   system.activationScripts.applications.text = let
