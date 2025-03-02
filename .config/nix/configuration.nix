@@ -6,10 +6,27 @@
     watchIdAuth = true;
   };
 
+  {
+  nixpkgs.overlays = [
+    (self: super: {
+      pam-watchid = super.stdenv.mkDerivation {
+        name = "pam-watchid";
+        src = super.fetchFromGitHub {
+          owner = "insidegui";
+          repo = "pam-watchid";
+          rev = "master"; # You might want to use a specific commit hash for stability
+          sha256 = ""; # You'll need to replace this with the correct hash
+        };
+        buildPhase = "make";
+        installPhase = "make install";
+      };
+    })
+  ];
+
+
   environment.systemPackages = [ 
     pkgs.vim
     pkgs.mkalias
-    pkgs.pam-watchid
   ];
 
   fonts.packages = [
