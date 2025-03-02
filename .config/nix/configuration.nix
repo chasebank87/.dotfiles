@@ -13,8 +13,8 @@
         src = super.fetchFromGitHub {
           owner = "insidegui";
           repo = "pam-watchid";
-          rev = "master"; # You might want to use a specific commit hash for stability
-          sha256 = "64e64ddf8b969d25ebb6096039837111fe278bd9"; # You'll need to replace this with the correct hash
+          rev = "master";
+          sha256 = "sha256-Ql6hxHx4GmPxkZiXJxqwp1s4VFf6CJ4KPYMVf3jOtMc="; # Updated hash
         };
         buildPhase = "make";
         installPhase = "make install";
