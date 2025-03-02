@@ -1,29 +1,4 @@
 { config, pkgs, lib, self, ... }: {
-  nixpkgs.overlays = [
-    (self: super: {
-      pam-watchid = super.stdenv.mkDerivation {
-        name = "pam-watchid";
-        src = super.fetchFromGitHub {
-          owner = "Logicer16";
-          repo = "pam-watchid";
-          rev = "master";
-          sha256 = "sha256-6islRMW5cbDwnN64kQQlHRv8cU2IkI4ZkmIrdc8GMiY=";
-        };
-        nativeBuildInputs = [ super.swift ];
-        buildPhase = ''
-          # Override the Makefile's build command with the correct architecture
-          swiftc watchid-pam-extension.swift -o pam_watchid.so \
-            -target arm64-apple-macosx13.0 \
-            -emit-library
-        '';
-        installPhase = ''
-          mkdir -p $out/lib/pam
-          cp pam_watchid.so $out/lib/pam/
-        '';
-      };
-    })
-  ];
-
    security.pam.services.sudo_local = {
     enable = true;
     reattach = true;
@@ -34,6 +9,7 @@
   environment.systemPackages = [ 
     pkgs.vim
     pkgs.mkalias
+    pkgs.pam-watchid
   ];
 
   fonts.packages = [
