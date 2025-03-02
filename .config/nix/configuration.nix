@@ -1,11 +1,4 @@
 { config, pkgs, lib, self, ... }: {
-   security.pam.services.sudo_local = {
-    enable = true;
-    reattach = true;
-    touchIdAuth = true;
-    watchIdAuth = true;
-  };
-
   nixpkgs.overlays = [
     (self: super: {
       pam-watchid = super.stdenv.mkDerivation {
@@ -31,6 +24,12 @@
     })
   ];
 
+   security.pam.services.sudo_local = {
+    enable = true;
+    reattach = true;
+    touchIdAuth = true;
+    watchIdAuth = true;
+  };
 
   environment.systemPackages = [ 
     pkgs.vim
