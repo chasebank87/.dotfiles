@@ -3,3 +3,6 @@
 
 # ignore secrets
 .config/nix/secrets.nix
+
+# keep example
+!.config/nix/secrets.example.nix
