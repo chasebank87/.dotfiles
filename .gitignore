@@ -1,2 +1,5 @@
 # ignore common macOS files
 .DS_Store
+
+# ignore secrets
+.config/nix/secrets.nix
