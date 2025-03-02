@@ -21,7 +21,7 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, home-manager, dotfiles }:
   let
     system = "aarch64-darwin";
-    secrets = import (./secrets.nix);
+    secretsConfig = import /Users/chase/.dotfiles/.config/nix/secrets.nix;
     pkgs = import nixpkgs {
       inherit system;
       config = {
@@ -45,7 +45,7 @@
           nix.settings = {
             experimental-features = [ "nix-command" "flakes" ];
             warn-dirty = false;
-            access-tokens = "github.com=${secrets.github_token}";
+            access-tokens = "github.com=${secretsConfig.github_token}";
           };
           nix.optimise.automatic = true;
           
