@@ -20,8 +20,8 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1740951323,
-        "narHash": "sha256-lno4EL4nptUOy75opvg6DdVBi1ptTCXKYHwP9LVLb+c=",
+        "lastModified": 1740951457,
+        "narHash": "sha256-aDLKrFW228URef4xtNvyFWGtntD91mvESoS49FT5tzg=",
         "path": "/Users/chase/.dotfiles",
         "type": "path"
       },
@@ -140,16 +140,16 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1720535198,
-        "narHash": "sha256-zwVvxrdIzralnSbcpghA92tWu2DV2lwv89xZc8MTrbg=",
+        "lastModified": 1719957072,
+        "narHash": "sha256-gvFhEf5nszouwLAkT9nWsDzocUTqLWHuL++dvNjMp9I=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "205fd4226592cc83fd4c0885a3e4c9c400efabb5",
+        "rev": "7144d6241f02d171d25fba3edeaf15e0f2592105",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-23.11",
+        "ref": "nixpkgs-23.11-darwin",
         "repo": "nixpkgs",
         "type": "github"
       }
