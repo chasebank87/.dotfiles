@@ -1,5 +1,6 @@
 { config, pkgs, lib, self, ... }: {
   security.pam.services.sudo_local.touchIdAuth = true;
+  security.pam.services.sudo_local.watchIdAuth = true
 
   environment.systemPackages = [ 
     pkgs.vim
