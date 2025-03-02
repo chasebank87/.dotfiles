@@ -9,6 +9,7 @@
   environment.systemPackages = [ 
     pkgs.vim
     pkgs.mkalias
+    pkgs.pam-watchid
   ];
 
   fonts.packages = [
