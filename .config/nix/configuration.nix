@@ -97,6 +97,7 @@
       "openjdk"
       "deno"
       "bun"
+      "mas"
     ];
     casks = [
       "anaconda"
@@ -132,8 +133,10 @@
       "superkey"
       "caffeine"
       "windsurf"
-      "xcode"
     ];
+    masApps = {
+      "Xcode" = 497799835;
+    };
     taps = [
       "oven-sh/bun"
     ];
