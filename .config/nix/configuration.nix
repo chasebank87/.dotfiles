@@ -133,7 +133,7 @@
       "caffeine"
     ];
     taps = [
-      "oven-sh/bun/bun"
+      "oven-sh/bun"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
