@@ -96,7 +96,7 @@
       "powershell/tap/powershell"
       "openjdk"
       "deno"
-      "oven-sh/bun/bun"
+      "bun"
     ];
     casks = [
       "anaconda"
@@ -133,6 +133,7 @@
       "caffeine"
     ];
     taps = [
+      "oven-sh/bun/bun"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
