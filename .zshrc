@@ -57,6 +57,9 @@ alias cd='z'
 ## bat
 alias cat='bat'
 
+## windsurf
+alias ws='windsurf'
+
 ## Nix Flake Update
 alias nfu='''
 pushd ~/.dotfiles/.config/nix > /dev/null
