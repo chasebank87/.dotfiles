@@ -131,6 +131,7 @@
       "cinebench"
       "superkey"
       "caffeine"
+      "windsurf"
     ];
     taps = [
       "oven-sh/bun"
