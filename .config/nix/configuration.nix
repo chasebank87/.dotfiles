@@ -96,7 +96,7 @@
       "powershell/tap/powershell"
       "openjdk"
       "deno"
-      "bun"
+      "oven-sh/bun/bun"
     ];
     casks = [
       "anaconda"
