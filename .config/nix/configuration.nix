@@ -87,7 +87,7 @@
       "lua"
       "thefuck"
       "bat"
-      "nushell"
+      "nushell"  
       "wget"
       "pam-reattach"
       "glfw"
@@ -96,6 +96,7 @@
       "powershell/tap/powershell"
       "openjdk"
       "deno"
+      "bun"
     ];
     casks = [
       "anaconda"
