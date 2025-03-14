@@ -83,7 +83,7 @@
       "zoxide"
       "go"
       "rust"
-      "zig@0.13.0"
+      "zig"
       "lua"
       "thefuck"
       "bat"
