@@ -132,6 +132,7 @@
       "superkey"
       "caffeine"
       "windsurf"
+      "xcode"
     ];
     taps = [
       "oven-sh/bun"
