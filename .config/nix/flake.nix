@@ -72,7 +72,8 @@
                   ".config/kitty".source = "${dotfiles}/.config/kitty";
                   ".config/ghostty".source = "${dotfiles}/.config/ghostty";
                   ".config/nushell".source = "${dotfiles}/.config/nushell";
-                  ".config/nvim".source = "${dotfiles}/.config/nvim";
+                  ".config/nvim/init.lua".source = "${dotfiles}/.config/nvim/init.lua";
+                  ".config/nvim/lua".source = "${dotfiles}/.config/nvim/lua";
                   "Library/Application Support/nushell/config.nu".source = "${dotfiles}/.config/nushell/pointer/config.nu";
                   "Library/Application Support/nushell/env.nu".source = "${dotfiles}/.config/nushell/pointer/env.nu";
                 };
@@ -85,6 +86,14 @@
                   userName = "chasebank87";
                   userEmail = "chase@chaseelder.com";
                 };
+              };
+
+              home.activation = {
+                createNvimDirs = lib.hm.dag.entryAfter ["writeBoundary"] ''
+                  $DRY_RUN_CMD mkdir -p $VERBOSE_ARG ~/.config/nvim
+                  $DRY_RUN_CMD touch $VERBOSE_ARG ~/.config/nvim/lazy-lock.json
+                  $DRY_RUN_CMD chmod $VERBOSE_ARG 644 ~/.config/nvim/lazy-lock.json
+                '';
               };
 
               xdg.enable = true;
