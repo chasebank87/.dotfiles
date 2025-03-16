@@ -75,6 +75,9 @@
     enable = true;
     brews = [
       "git"
+      "make"
+      "unzip"
+      "gcc"
       "node"
       "ntfy"
       "pandoc"
