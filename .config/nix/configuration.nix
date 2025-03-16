@@ -98,6 +98,7 @@
       "deno"
       "bun"
       "mas"
+      "neovim"
     ];
     casks = [
       "anaconda"
