@@ -78,6 +78,7 @@
       "make"
       "unzip"
       "gcc"
+      "ripgrep"
       "node"
       "ntfy"
       "pandoc"
