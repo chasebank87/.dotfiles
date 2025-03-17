@@ -138,6 +138,7 @@
       "superkey"
       "caffeine"
       "windsurf"
+      "imazing"
     ];
     masApps = {
       "Xcode" = 497799835;
