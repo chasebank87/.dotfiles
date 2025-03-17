@@ -73,6 +73,7 @@
                   ".config/ghostty".source = "${dotfiles}/.config/ghostty";
                   ".config/nushell".source = "${dotfiles}/.config/nushell";
                   ".config/nvim/init.lua".source = "${dotfiles}/.config/nvim/init.lua";
+                  ".config/nvim/.stylua.toml".source = "${dotfiles}/.config/nvim/.stylua.toml";
                   ".config/nvim/lua".source = "${dotfiles}/.config/nvim/lua";
                   "Library/Application Support/nushell/config.nu".source = "${dotfiles}/.config/nushell/pointer/config.nu";
                   "Library/Application Support/nushell/env.nu".source = "${dotfiles}/.config/nushell/pointer/env.nu";
