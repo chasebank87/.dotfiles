@@ -71,6 +71,11 @@ git add .
 git commit -m "Nix Flake Update"
 git push origin main
 popd > /dev/null
+cd ~/.dotfiles/config/nvim
+git add .
+git commit -m "Nix Flake Update"
+git push origin main
+popd > /dev/null
 '''
 
 ## Nix Flake Rebuild
