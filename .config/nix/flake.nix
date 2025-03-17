@@ -72,8 +72,6 @@
                   ".config/kitty".source = "${dotfiles}/.config/kitty";
                   ".config/ghostty".source = "${dotfiles}/.config/ghostty";
                   ".config/nushell".source = "${dotfiles}/.config/nushell";
-                  ".config/nvim/init.lua".source = "${dotfiles}/.config/nvim/init.lua";
-                  ".config/nvim/lua".source = "${dotfiles}/.config/nvim/lua";
                   "Library/Application Support/nushell/config.nu".source = "${dotfiles}/.config/nushell/pointer/config.nu";
                   "Library/Application Support/nushell/env.nu".source = "${dotfiles}/.config/nushell/pointer/env.nu";
                 };
@@ -89,8 +87,17 @@
               };
 
               home.activation = {
-                createNvimDirs = lib.hm.dag.entryAfter ["writeBoundary"] ''
+                nvimSetup = lib.hm.dag.entryAfter ["writeBoundary"] ''
                   $DRY_RUN_CMD mkdir -p $VERBOSE_ARG ~/.config/nvim
+                  
+                  # Copy init.lua
+                  $DRY_RUN_CMD cp -f $VERBOSE_ARG "${dotfiles}/.config/nvim/init.lua" ~/.config/nvim/init.lua
+                  
+                  # Recursively copy lua directory
+                  $DRY_RUN_CMD mkdir -p $VERBOSE_ARG ~/.config/nvim/lua
+                  $DRY_RUN_CMD cp -rf $VERBOSE_ARG "${dotfiles}/.config/nvim/lua/"* ~/.config/nvim/lua/
+                  
+                  # Ensure we have a writable lazy-lock.json
                   $DRY_RUN_CMD touch $VERBOSE_ARG ~/.config/nvim/lazy-lock.json
                   $DRY_RUN_CMD chmod $VERBOSE_ARG 644 ~/.config/nvim/lazy-lock.json
                 '';
