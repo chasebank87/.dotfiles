@@ -88,14 +88,21 @@
 
               home.activation = {
                 nvimSetup = lib.hm.dag.entryAfter ["writeBoundary"] ''
+                  # Ensure the base nvim directory exists
                   $DRY_RUN_CMD mkdir -p $VERBOSE_ARG ~/.config/nvim
                   
                   # Copy init.lua
                   $DRY_RUN_CMD cp -f $VERBOSE_ARG "${dotfiles}/.config/nvim/init.lua" ~/.config/nvim/init.lua
                   
-                  # Recursively copy lua directory
+                  # Remove and recreate lua directory to avoid permission issues
+                  $DRY_RUN_CMD rm -rf $VERBOSE_ARG ~/.config/nvim/lua
                   $DRY_RUN_CMD mkdir -p $VERBOSE_ARG ~/.config/nvim/lua
+                  
+                  # Recursively copy lua directory with proper permissions
                   $DRY_RUN_CMD cp -rf $VERBOSE_ARG "${dotfiles}/.config/nvim/lua/"* ~/.config/nvim/lua/
+                  
+                  # Ensure the copied files have correct permissions
+                  $DRY_RUN_CMD chmod -R $VERBOSE_ARG u+rw ~/.config/nvim/lua
                   
                   # Ensure we have a writable lazy-lock.json
                   $DRY_RUN_CMD touch $VERBOSE_ARG ~/.config/nvim/lazy-lock.json
