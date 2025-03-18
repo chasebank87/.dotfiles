@@ -114,7 +114,6 @@
       "hammerspoon"
       "karabiner-elements"
       "lm-studio"
-      "loopback"
       "microsoft-teams"
       "obsidian"
       "pallotron-yubiswitch"
