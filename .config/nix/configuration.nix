@@ -139,6 +139,7 @@
       "caffeine"
       "windsurf"
       "imazing"
+      "todoist"
     ];
     masApps = {
       "Xcode" = 497799835;
