@@ -139,6 +139,7 @@
       "windsurf"
       "imazing"
       "todoist"
+      "loopback"
     ];
     masApps = {
       "Xcode" = 497799835;
