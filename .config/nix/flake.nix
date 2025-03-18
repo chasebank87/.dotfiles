@@ -104,6 +104,9 @@
                 buildLadybird = lib.hm.dag.entryAfter ["writeBoundary"] ''
                   echo "Building Ladybird browser..."
                   
+                  # Set up PATH to include Homebrew packages
+                  export PATH="/opt/homebrew/bin:$PATH"
+                  
                   # Create Development directory if it doesn't exist
                   $DRY_RUN_CMD mkdir -p $VERBOSE_ARG ~/Development
                   
