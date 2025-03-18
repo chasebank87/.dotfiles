@@ -66,6 +66,10 @@ pushd ~/.dotfiles/.config/nix > /dev/null
 nix flake update
 darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook
 source ~/.zshrc
+cd ~/.dotfiles/.config/nvim
+git add .
+git commit -m "Nix Flake Update"
+git push origin master
 cd ~/.dotfiles
 git add .
 git commit -m "Nix Flake Update"
