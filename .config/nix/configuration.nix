@@ -103,6 +103,16 @@
       "bun"
       "mas"
       "neovim"
+      "autoconf"
+      "autoconf-archive"
+      "automake"
+      "ccache"
+      "cmake"
+      "nasm"
+      "ninja"
+      "pkg-config"
+      "llvm@19"
+      "qt"
     ];
     casks = [
       "anaconda"
