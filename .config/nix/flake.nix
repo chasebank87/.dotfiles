@@ -99,33 +99,6 @@
                   $DRY_RUN_CMD touch $VERBOSE_ARG ~/.config/nvim/lazy-lock.json
                   $DRY_RUN_CMD chmod $VERBOSE_ARG 644 ~/.config/nvim/lazy-lock.json
                 '';
-
-                # Add Ladybird browser build process
-                buildLadybird = lib.hm.dag.entryAfter ["writeBoundary"] ''
-                  echo "Building Ladybird browser..."
-                  
-                  # Set up PATH to include Homebrew packages
-                  export PATH="/opt/homebrew/bin:$PATH"
-                  
-                  # Create Development directory if it doesn't exist
-                  $DRY_RUN_CMD mkdir -p $VERBOSE_ARG ~/Development
-                  
-                  # Clone or update Ladybird repository
-                  if [ ! -d ~/Development/ladybird ]; then
-                    $DRY_RUN_CMD git clone https://github.com/LadybirdBrowser/ladybird.git ~/Development/ladybird
-                  else
-                    pushd ~/Development/ladybird > /dev/null
-                    $DRY_RUN_CMD git pull
-                    popd > /dev/null
-                  fi
-                  
-                  # Build Ladybird
-                  pushd ~/Development/ladybird > /dev/null
-                  $DRY_RUN_CMD env CC=$(brew --prefix llvm)/bin/clang \
-                      CXX=$(brew --prefix llvm)/bin/clang++ \
-                      ./Meta/ladybird.sh run
-                  popd > /dev/null
-                '';
               };
 
               xdg.enable = true;
