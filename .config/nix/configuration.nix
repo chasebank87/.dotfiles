@@ -140,6 +140,7 @@
       "imazing"
       "todoist"
       "loopback"
+      "trae"
     ];
     masApps = {
       "Xcode" = 497799835;
