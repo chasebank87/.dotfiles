@@ -106,6 +106,7 @@
       "mongodb-community"
       "mongodb-database-tools"
       "mongosh"
+      "ffmpeg"
     ];
     casks = [
       "anaconda"
