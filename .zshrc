@@ -19,6 +19,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Initialize MongoDB
+brew services start mongodb-community
+
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
 
