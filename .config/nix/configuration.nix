@@ -103,6 +103,7 @@
       "bun"
       "mas"
       "neovim"
+      "mongodb-community"
     ];
     casks = [
       "anaconda"
