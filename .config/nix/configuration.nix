@@ -148,6 +148,7 @@
     };
     taps = [
       "oven-sh/bun"
+      "mongodb/brew"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
