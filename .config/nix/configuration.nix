@@ -105,6 +105,7 @@
       "neovim"
       "mongodb-community"
       "mongodb-database-tools"
+      "mongosh"
     ];
     casks = [
       "anaconda"
