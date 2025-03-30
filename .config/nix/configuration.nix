@@ -108,7 +108,6 @@
       "mongosh"
       "ffmpeg"
       "docker-compose"
-      "docker"
     ];
     casks = [
       "anaconda"
