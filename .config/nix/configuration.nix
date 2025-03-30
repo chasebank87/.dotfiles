@@ -146,7 +146,6 @@
       "todoist"
       "loopback"
       "trae"
-      "homebrew/cask/docker"
     ];
     masApps = {
       "Xcode" = 497799835;
