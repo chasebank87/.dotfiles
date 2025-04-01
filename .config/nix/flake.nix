@@ -55,6 +55,11 @@
             user = "chase";
           };
           
+          users.users.chase = {
+            name = "chase";
+            home = "/Users/chase";
+          };
+          
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
