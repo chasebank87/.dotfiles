@@ -149,6 +149,7 @@
       "trae"
       "homebrew/cask/docker"
       "openvpn-connect"
+      "moonlight"
     ];
     masApps = {
       "Xcode" = 497799835;
