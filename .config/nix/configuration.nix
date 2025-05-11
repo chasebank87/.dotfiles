@@ -154,7 +154,6 @@
     masApps = {
       "Xcode" = 497799835;
       "Folder Preview" = 6698876601;
-      "Command X" = 6448461551;
     };
     taps = [
       "oven-sh/bun"
