@@ -109,6 +109,7 @@
       "ffmpeg"
       "docker-compose"
       "poppler"
+      "folder-preview"
     ];
     casks = [
       "anaconda"
