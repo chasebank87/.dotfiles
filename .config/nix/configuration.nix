@@ -143,7 +143,6 @@
       "superkey"
       "caffeine"
       "windsurf"
-      "imazing"
       "todoist"
       "loopback"
       "trae"
