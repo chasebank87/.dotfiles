@@ -150,6 +150,7 @@
       "homebrew/cask/docker"
       "openvpn-connect"
       "moonlight"
+      "citrix-workspace"
     ];
     masApps = {
       "Xcode" = 497799835;
