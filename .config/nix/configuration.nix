@@ -151,7 +151,7 @@
       "openvpn-connect"
       "moonlight"
       "citrix-workspace"
-      "jiggler
+      "jiggler"
     ];
     masApps = {
       "Xcode" = 497799835;
