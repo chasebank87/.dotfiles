@@ -6,6 +6,9 @@
     watchIdAuth = true;
   };
 
+  # Set primary user for homebrew and system defaults
+  system.primaryUser = "chase";
+
   environment.systemPackages = [ 
     pkgs.vim
     pkgs.mkalias
