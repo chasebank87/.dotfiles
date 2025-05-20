@@ -152,7 +152,7 @@
       "moonlight"
       "citrix-workspace"
       "jiggler"
-    ]
+    ];
     masApps = {
       "Xcode" = 497799835;
       "Folder Preview" = 6698876601;
