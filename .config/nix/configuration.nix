@@ -152,6 +152,7 @@
       "moonlight"
       "citrix-workspace"
       "jiggler"
+      "notion"
     ];
     masApps = {
       "Xcode" = 497799835;
