@@ -69,8 +69,8 @@ alias ws='windsurf'
 ## Nix Flake Update
 alias nfu='''
 pushd ~/.dotfiles/.config/nix > /dev/null
-nix flake update
-darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook
+sudo nix flake update
+sudo darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook
 source ~/.zshrc
 cd ~/.dotfiles/.config/nvim
 git add .
