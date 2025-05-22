@@ -155,7 +155,6 @@
       "moonlight"
       "citrix-workspace"
       "jiggler"
-      "the-unarchiver"
     ];
     masApps = {
       "Xcode" = 497799835;
