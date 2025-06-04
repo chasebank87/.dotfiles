@@ -157,6 +157,7 @@
       "jiggler"
       "the-unarchiver"
       "sigmaos"
+      "zen"
     ];
     masApps = {
       "Xcode" = 497799835;
