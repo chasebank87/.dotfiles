@@ -156,6 +156,7 @@
       "citrix-workspace"
       "jiggler"
       "the-unarchiver"
+      "sigmaos"
     ];
     masApps = {
       "Xcode" = 497799835;
