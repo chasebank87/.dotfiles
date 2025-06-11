@@ -158,6 +158,7 @@
       "the-unarchiver"
       "sigmaos"
       "zen"
+      "handbrake"
     ];
     masApps = {
       "Xcode" = 497799835;
