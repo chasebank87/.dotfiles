@@ -159,6 +159,7 @@
       "sigmaos"
       "zen"
       "handbrake"
+      "sony-ps-remote-play"
     ];
     masApps = {
       "Xcode" = 497799835;
