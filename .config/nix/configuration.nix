@@ -160,6 +160,7 @@
       "zen"
       "handbrake"
       "sony-ps-remote-play"
+      "vlc"
     ];
     masApps = {
       "Xcode" = 497799835;
