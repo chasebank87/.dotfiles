@@ -161,6 +161,7 @@
       "handbrake"
       "sony-ps-remote-play"
       "vlc"
+      "jump-desktop-connect"
     ];
     masApps = {
       "Xcode" = 497799835;
