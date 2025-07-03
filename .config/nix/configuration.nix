@@ -162,7 +162,6 @@
       "sony-ps-remote-play"
       "vlc"
       "jump-desktop-connect"
-      "epic-games"
     ];
     masApps = {
       "Xcode" = 497799835;
