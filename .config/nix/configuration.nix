@@ -111,6 +111,7 @@
       "mongosh"
       "ffmpeg"
       "docker-compose"
+      "docker"
       "poppler"
       "redis"
     ];
@@ -148,7 +149,7 @@
       "caffeine"
       "windsurf"
       "todoist"
-      "docker"
+      "homebrew/cask/docker"
       "loopback"
       "audio-hijack"
       "trae"
