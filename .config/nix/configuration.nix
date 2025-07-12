@@ -149,6 +149,7 @@
       "windsurf"
       "todoist"
       "loopback"
+      "audio-hijack"
       "trae"
       "homebrew/cask/docker"
       "openvpn-connect"
