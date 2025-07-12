@@ -111,6 +111,7 @@
       "mongosh"
       "ffmpeg"
       "docker-compose"
+      "docker"
       "poppler"
       "redis"
     ];
@@ -151,7 +152,6 @@
       "loopback"
       "audio-hijack"
       "trae"
-      "homebrew/cask/docker"
       "openvpn-connect"
       "moonlight"
       "citrix-workspace"
