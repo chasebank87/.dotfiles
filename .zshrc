@@ -69,27 +69,36 @@ alias ws='windsurf'
 
 ## Nix Flake Update
 alias nfu='''
+echo "🔄 Updating Nix flake..."
 pushd ~/.dotfiles/.config/nix > /dev/null
 sudo nix flake update
+echo "🔧 Rebuilding system..."
 sudo darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook
+echo "📝 Sourcing updated zshrc..."
 source ~/.zshrc
+echo "💾 Committing nvim changes..."
 cd ~/.dotfiles/.config/nvim
 git add .
 git commit -m "Nix Flake Update"
 git push origin master
+echo "💾 Committing dotfiles changes..."
 cd ~/.dotfiles
 git add .
 git commit -m "Nix Flake Update"
 git push origin main
 popd > /dev/null
+echo "✅ Nix flake update complete!"
 '''
 
 ## Nix Flake Rebuild
 alias nfr='''
+echo "🔧 Rebuilding Nix system..."
 pushd ~/.dotfiles/.config/nix > /dev/null
 darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook
+echo "📝 Sourcing updated zshrc..."
 source ~/.zshrc
 popd > /dev/null
+echo "✅ Nix rebuild complete!"
 '''
 
 ## The Fuck
