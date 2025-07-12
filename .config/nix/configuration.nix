@@ -111,7 +111,6 @@
       "mongosh"
       "ffmpeg"
       "docker-compose"
-      "docker"
       "poppler"
       "redis"
     ];
