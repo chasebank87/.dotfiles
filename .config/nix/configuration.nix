@@ -96,6 +96,7 @@
       "docker"
       "poppler"
       "redis"
+      "colima" 
     ];
     casks = [
       "anaconda"
@@ -130,7 +131,6 @@
       "superkey"
       "caffeine"
       "windsurf"
-      "todoist"
       "loopback"
       "audio-hijack"
       "trae"
@@ -141,7 +141,6 @@
       "the-unarchiver"
       "sigmaos"
       "zen"
-      "handbrake"
       "sony-ps-remote-play"
       "vlc"
       "jump-desktop-connect"
