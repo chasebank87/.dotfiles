@@ -146,6 +146,7 @@
       "jump-desktop-connect"
       "handbrake"
       "todoist"
+      "libreoffice"
     ];
     masApps = {
       "Xcode" = 497799835;
