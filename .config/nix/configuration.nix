@@ -144,6 +144,8 @@
       "sony-ps-remote-play"
       "vlc"
       "jump-desktop-connect"
+      "handbrake"
+      "todoist"
     ];
     masApps = {
       "Xcode" = 497799835;
