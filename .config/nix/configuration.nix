@@ -97,6 +97,7 @@
       "poppler"
       "redis"
       "colima" 
+      "flyctl"
     ];
     casks = [
       "anaconda"
