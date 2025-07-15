@@ -157,6 +157,7 @@
     taps = [
       "oven-sh/bun"
       "mongodb/brew"
+      "heroku/brew"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
