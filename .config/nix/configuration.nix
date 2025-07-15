@@ -98,6 +98,7 @@
       "redis"
       "colima" 
       "flyctl"
+      "heroku/brew/heroku"
     ];
     casks = [
       "anaconda"
