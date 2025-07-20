@@ -149,6 +149,7 @@
       "handbrake"
       "todoist"
       "libreoffice"
+      "insomnia"
     ];
     masApps = {
       "Xcode" = 497799835;
