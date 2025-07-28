@@ -150,6 +150,7 @@
       "todoist"
       "libreoffice"
       "insomnia"
+      "dotnet-sdk"
     ];
     masApps = {
       "Xcode" = 497799835;
