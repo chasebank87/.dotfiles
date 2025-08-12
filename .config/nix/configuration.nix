@@ -151,6 +151,7 @@
       "libreoffice"
       "insomnia"
       "dotnet-sdk"
+      "gamemaker"
     ];
     masApps = {
       "Xcode" = 497799835;
