@@ -99,6 +99,7 @@
       "colima" 
       "flyctl"
       "heroku/brew/heroku"
+      "yt-dlp"
     ];
     casks = [
       "anaconda"
