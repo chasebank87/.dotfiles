@@ -100,6 +100,7 @@
       "flyctl"
       "heroku/brew/heroku"
       "yt-dlp"
+      "cmake"
     ];
     casks = [
       "anaconda"
