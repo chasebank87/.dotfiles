@@ -91,8 +91,12 @@
                 home-manager.enable = true;
                 git = {
                   enable = true;
-                  userName = "chasebank87";
-                  userEmail = "chase@chaseelder.com";
+                  settings = {
+                    user = {
+                      name = "chasebank87";
+                      email = "chase@chaseelder.com";
+                    };
+                  };
                 };
               };
 
