@@ -71,9 +71,9 @@ alias ws='windsurf'
 alias nfu='''
 echo "🔄 Updating Nix flake..."
 pushd ~/.dotfiles/.config/nix > /dev/null
-sudo nix flake update
+nix flake update
 echo "🔧 Rebuilding system..."
-sudo darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook
+sudo -H darwin-rebuild switch --flake ~/.dotfiles/.config/nix#m4macbook
 echo "📝 Sourcing updated zshrc..."
 source ~/.zshrc
 echo "💾 Committing nvim changes..."
