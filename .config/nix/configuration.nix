@@ -154,6 +154,7 @@
       "insomnia"
       "dotnet-sdk"
       "gamemaker"
+      "claude-code"
     ];
     masApps = {
       "Xcode" = 497799835;
