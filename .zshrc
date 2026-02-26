@@ -5,6 +5,7 @@ export PATH=/opt/homebrew/anaconda3/bin:$PATH
 export PATH=/Users/chase/.cargo/bin:$PATH
 export PATH=/Applications/Parallels\ Desktop.app/Contents/MacOS:$PATH
 export PATH=/Users/chase/depot_tools:$PATH
+export PATH=~/.local/bin:$PATH
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
