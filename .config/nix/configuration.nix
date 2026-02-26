@@ -156,6 +156,7 @@
       "gamemaker"
       "claude-code"
       "claude"
+      "logi-options+"
     ];
     masApps = {
       "Xcode" = 497799835;
