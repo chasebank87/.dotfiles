@@ -101,6 +101,7 @@
       "heroku/brew/heroku"
       "yt-dlp"
       "cmake"
+      "fswatch"
     ];
     casks = [
       "anaconda"
