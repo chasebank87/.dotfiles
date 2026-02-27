@@ -158,6 +158,7 @@
       "claude-code"
       "claude"
       "logi-options+"
+      "iina"
     ];
     masApps = {
       "Xcode" = 497799835;
