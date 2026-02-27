@@ -159,6 +159,7 @@
       "claude"
       "logi-options+"
       "iina"
+      "dockdoor"
     ];
     masApps = {
       "Xcode" = 497799835;
