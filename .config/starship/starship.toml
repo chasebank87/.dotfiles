@@ -90,12 +90,12 @@ truncate_to_repo = false
 # Here is how you can shorten some long paths by text replacement
 # similar to mapped_locations in Oh My Posh:
 [directory.substitutions]
-"Documents" = "󰈙 Documents"
-"Downloads" = " Downloads"
-"Music" = " Music"
-"Pictures" = " Pictures"
-"~" = " Home"
-"/Users/chase" = " Home"
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+"~" = ""
+"/Users/chase" = ""
 
 # Keep in mind that the order matters. For example:
 # "Important Documents" = " 󰈙 "
