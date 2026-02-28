@@ -91,11 +91,11 @@ truncate_to_repo = false
 # similar to mapped_locations in Oh My Posh:
 [directory.substitutions]
 "Documents" = "󰈙"
-"Downloads" = ""
-"Music" = ""
-"Pictures" = ""
-"~" = ""
-"/Users/chase" = ""
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"~" = "   ~"
+"/Users/chase" = "   ~"
 
 # Keep in mind that the order matters. For example:
 # "Important Documents" = " 󰈙 "
