@@ -95,7 +95,7 @@ truncate_to_repo = false
 "Music" = "  "
 "Pictures" = "  "
 "~" = "   ~"
-"/Users/chase" = "   ~"
+"/Users/chase" = "   ~" 
 
 # Keep in mind that the order matters. For example:
 # "Important Documents" = " 󰈙 "
