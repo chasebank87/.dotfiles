@@ -160,6 +160,7 @@
       "logi-options+"
       "iina"
       "dockdoor"
+      "microsoft-teams"
     ];
     masApps = {
       "Xcode" = 497799835;
