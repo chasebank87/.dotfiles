@@ -160,6 +160,7 @@
       "logi-options+"
       "iina"
       "dockdoor"
+      "mutedeck"
     ];
     masApps = {
       "Xcode" = 497799835;
