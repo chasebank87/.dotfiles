@@ -102,6 +102,7 @@
       "yt-dlp"
       "cmake"
       "fswatch"
+      "openclaw-cli"
     ];
     casks = [
       "anaconda"
@@ -162,6 +163,7 @@
       "dockdoor"
       "mutedeck"
       "altar-ai"
+      "openclaw"
     ];
     masApps = {
       "Xcode" = 497799835;

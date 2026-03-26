@@ -70,7 +70,7 @@
               home = {
                 username = "chase";
                 homeDirectory = lib.mkForce "/Users/chase";
-                stateVersion = "23.11";
+                stateVersion = "25.11";
                 
                 file = {
                   ".zshrc".source = "${dotfiles}/.zshrc";
