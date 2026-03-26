@@ -161,6 +161,7 @@
       "iina"
       "dockdoor"
       "mutedeck"
+      "altar-ai"
     ];
     masApps = {
       "Xcode" = 497799835;
