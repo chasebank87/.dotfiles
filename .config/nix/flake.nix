@@ -67,6 +67,8 @@
             useUserPackages = true;
             backupFileExtension = "backup";
             users.chase = { config, lib, ... }: {
+              targets.darwin.copyApps.enable = false; # 25.11 default; rsync/TCC issues, no HM GUI apps
+
               home = {
                 username = "chase";
                 homeDirectory = lib.mkForce "/Users/chase";
