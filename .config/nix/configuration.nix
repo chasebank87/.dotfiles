@@ -104,6 +104,7 @@
       "fswatch"
       "openclaw-cli"
       "tailscale"
+      "steipete/tap/imsg"
     ];
     casks = [
       "anaconda"
@@ -175,7 +176,6 @@
       "oven-sh/bun"
       "mongodb/brew"
       "heroku/brew"
-      "steipete/tap/imsg"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
