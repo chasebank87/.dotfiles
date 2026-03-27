@@ -165,7 +165,7 @@
       "mutedeck"
       "altar-ai"
       "openclaw"
-      "tailscale-app
+      "tailscale-app"
     ];
     masApps = {
       "Xcode" = 497799835;
