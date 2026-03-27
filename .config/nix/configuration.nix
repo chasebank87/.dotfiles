@@ -103,6 +103,7 @@
       "cmake"
       "fswatch"
       "openclaw-cli"
+      "tailscale"
     ];
     casks = [
       "anaconda"
@@ -164,6 +165,7 @@
       "mutedeck"
       "altar-ai"
       "openclaw"
+      "tailscale-app
     ];
     masApps = {
       "Xcode" = 497799835;
