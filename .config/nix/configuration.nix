@@ -105,6 +105,7 @@
       "openclaw-cli"
       "tailscale"
       "steipete/tap/imsg"
+      "steipete/tap/remindctl"
     ];
     casks = [
       "anaconda"
