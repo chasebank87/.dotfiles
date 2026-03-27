@@ -102,10 +102,7 @@
       "yt-dlp"
       "cmake"
       "fswatch"
-      "openclaw-cli"
       "tailscale"
-      "steipete/tap/imsg"
-      "steipete/tap/remindctl"
     ];
     casks = [
       "anaconda"
@@ -166,7 +163,6 @@
       "dockdoor"
       "mutedeck"
       "altar-ai"
-      "openclaw"
       "tailscale-app"
     ];
     masApps = {
