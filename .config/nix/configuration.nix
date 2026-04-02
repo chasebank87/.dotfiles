@@ -164,6 +164,7 @@
       "mutedeck"
       "altar-ai"
       "tailscale-app"
+      "the-unarchiver"
     ];
     masApps = {
       "Xcode" = 497799835;
