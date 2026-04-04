@@ -165,6 +165,7 @@
       "altar-ai"
       "tailscale-app"
       "the-unarchiver"
+      "epic-games"
     ];
     masApps = {
       "Xcode" = 497799835;
