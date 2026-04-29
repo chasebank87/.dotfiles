@@ -166,6 +166,7 @@
       "tailscale-app"
       "the-unarchiver"
       "epic-games"
+      "crossover"
     ];
     masApps = {
       "Xcode" = 497799835;
