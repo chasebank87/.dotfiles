@@ -167,6 +167,7 @@
       "the-unarchiver"
       "epic-games"
       "crossover"
+      "cyberduck"
     ];
     masApps = {
       "Xcode" = 497799835;
