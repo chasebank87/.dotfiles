@@ -168,6 +168,7 @@
       "epic-games"
       "crossover"
       "cyberduck"
+      "transnomino"
     ];
     masApps = {
       "Xcode" = 497799835;
