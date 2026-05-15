@@ -169,6 +169,7 @@
       "crossover"
       "cyberduck"
       "transnomino"
+      "omnigraffle"
     ];
     masApps = {
       "Xcode" = 497799835;
