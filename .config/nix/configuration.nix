@@ -170,6 +170,7 @@
       "cyberduck"
       "transnomino"
       "omnigraffle"
+      "xykong/tap/flux-markdown"
     ];
     masApps = {
       "Xcode" = 497799835;
