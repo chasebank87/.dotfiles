@@ -171,6 +171,7 @@
       "transnomino"
       "omnigraffle"
       "xykong/tap/flux-markdown"
+      "antinote"
     ];
     masApps = {
       "Xcode" = 497799835;
