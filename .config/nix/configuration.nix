@@ -162,7 +162,6 @@
       "iina"
       "dockdoor"
       "mutedeck"
-      "altar-ai"
       "tailscale-app"
       "the-unarchiver"
       "epic-games"
