@@ -166,7 +166,6 @@
       "cyberduck"
       "transnomino"
       "omnigraffle"
-      "xykong/tap/flux-markdown"
       "antinote"
       "commander-one"
       "temurin@25"
