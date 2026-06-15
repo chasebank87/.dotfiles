@@ -170,6 +170,7 @@
       "xykong/tap/flux-markdown"
       "antinote"
       "commander-one"
+      "temurin@25"
     ];
     masApps = {
       "Xcode" = 497799835;
