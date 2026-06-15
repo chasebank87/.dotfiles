@@ -88,7 +88,6 @@
       "bun"
       "mas"
       "neovim"
-      "mongodb-community"
       "mongodb-database-tools"
       "mongosh"
       "ffmpeg"
