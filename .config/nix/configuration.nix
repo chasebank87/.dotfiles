@@ -88,7 +88,6 @@
       "bun"
       "mas"
       "neovim"
-      "mongodb-database-tools"
       "mongosh"
       "ffmpeg"
       "docker-compose"
