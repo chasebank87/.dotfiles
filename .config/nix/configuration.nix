@@ -82,8 +82,8 @@
       "glfw"
       "jc"
       "freetype"
-      "powershell/tap/powershell"
       "openjdk"
+      "jenv"
       "deno"
       "bun"
       "mas"
@@ -103,7 +103,6 @@
       "cmake"
       "fswatch"
       "tailscale"
-      "openjdk"
     ];
     casks = [
       "anaconda"
