@@ -171,6 +171,7 @@
       "omnigraffle"
       "xykong/tap/flux-markdown"
       "antinote"
+      "commander-one"
     ];
     masApps = {
       "Xcode" = 497799835;
