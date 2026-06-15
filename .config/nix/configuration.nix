@@ -103,6 +103,7 @@
       "cmake"
       "fswatch"
       "tailscale"
+      "openjdk"
     ];
     casks = [
       "anaconda"
