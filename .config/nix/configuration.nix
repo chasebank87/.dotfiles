@@ -169,6 +169,7 @@
       "antinote"
       "commander-one"
       "temurin@25"
+      "openconnect"
     ];
     masApps = {
       "Xcode" = 497799835;
