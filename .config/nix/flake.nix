@@ -4,7 +4,9 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin = {
-      url = "github:LnL7/nix-darwin/master";
+      # Temporary: master fails to build darwin-manual-html until PR #1818 merges
+      # (nixos-render-docs removed --toc-depth in nixpkgs#537810)
+      url = "github:nix-darwin/nix-darwin/320cbf535b80ffde6c1dbe2f80e29c791e84f494";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";

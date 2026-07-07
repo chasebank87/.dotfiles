@@ -134,7 +134,7 @@
       "cinebench"
       "superkey"
       "caffeine"
-      "windsurf"
+      "devin-desktop"
       "loopback"
       "audio-hijack"
       "trae"
@@ -170,6 +170,7 @@
       "antinote"
       "commander-one"
       "temurin@25"
+      "ollama"
     ];
     masApps = {
       "Xcode" = 497799835;
