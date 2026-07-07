@@ -173,8 +173,8 @@
       "ollama"
     ];
     masApps = {
-      "Xcode" = 497799835;
-      "Folder Preview" = 6698876601;
+      # "Xcode" = 497799835;
+      # "Folder Preview" = 6698876601;
     };
     taps = [
       "oven-sh/bun"
