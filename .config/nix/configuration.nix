@@ -101,7 +101,6 @@
       "fswatch"
       "tailscale"
       "openconnect"
-      "ollama"
     ];
     casks = [
       "anaconda"
@@ -171,6 +170,7 @@
       "antinote"
       "commander-one"
       "temurin@25"
+      "ollama"
     ];
     masApps = {
       "Xcode" = 497799835;
