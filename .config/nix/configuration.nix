@@ -170,16 +170,16 @@
       "antinote"
       "commander-one"
       "temurin@25"
-      "ollama"
+      "ollama-app"
     ];
     masApps = {
       # "Xcode" = 497799835;
       # "Folder Preview" = 6698876601;
     };
     taps = [
-      "oven-sh/bun"
-      "mongodb/brew"
-      "heroku/brew"
+      { name = "oven-sh/bun"; trusted = true; }
+      { name = "mongodb/brew"; trusted = true; }
+      { name = "heroku/brew"; trusted = true; }
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
