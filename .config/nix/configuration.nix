@@ -101,6 +101,7 @@
       "fswatch"
       "tailscale"
       "openconnect"
+      "ollama"
     ];
     casks = [
       "anaconda"
