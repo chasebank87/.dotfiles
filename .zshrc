@@ -23,7 +23,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # Initialize MongoDB
-if ! brew services list | grep -q "mongodb-community"; then
+if ! brew services list 2>/dev/null | rg -q '^mongodb-community\s+started'; then
     brew services start mongodb-community
 fi
 

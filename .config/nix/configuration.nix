@@ -89,6 +89,7 @@
       "mas"
       "neovim"
       "mongosh"
+      { name = "mongodb/brew/mongodb-community"; trusted = true; }
       "ffmpeg"
       "docker-compose"
       "docker"
@@ -189,4 +190,12 @@
   system.configurationRevision = self.rev or self.dirtyRev or null;
   system.stateVersion = 5;
   nixpkgs.hostPlatform = "aarch64-darwin";
+
+  # docker-completion is deprecated and conflicts with the docker formula's completions
+  system.activationScripts.preActivation.text = lib.mkAfter ''
+    if [ -x /opt/homebrew/bin/brew ]; then
+      /opt/homebrew/bin/brew unlink docker-completion 2>/dev/null || true
+      /opt/homebrew/bin/brew uninstall --ignore-dependencies docker-completion 2>/dev/null || true
+    fi
+  '';
 }

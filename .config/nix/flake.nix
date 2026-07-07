@@ -57,6 +57,16 @@
             user = "chase";
             # Package management is handled by the built-in homebrew module
             # This module only manages the Homebrew installation itself
+            trust = {
+              taps = [
+                "oven-sh/bun"
+                "mongodb/brew"
+                "heroku/brew"
+              ];
+              formulae = [
+                "mongodb/brew/mongodb-community"
+              ];
+            };
           };
           
           users.users.chase = {
