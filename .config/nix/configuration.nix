@@ -59,6 +59,7 @@
   homebrew = {
     enable = true;
     brews = [
+      "docker-compose"
       "git"
       "make"
       "unzip"
