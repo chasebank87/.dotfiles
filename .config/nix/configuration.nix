@@ -105,6 +105,7 @@
       "openconnect"
     ];
     casks = [
+      "keyboardcleantool"
       "anaconda"
       "forklift"
       "arc"
