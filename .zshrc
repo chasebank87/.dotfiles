@@ -106,4 +106,5 @@ echo "✅ Nix rebuild complete!"
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
 
-nerdfetch
+# Custom nerdfetch (mirrors neofetch fields; stock nerdfetch has no config)
+"$HOME/.config/nerdfetch/nerdfetch"

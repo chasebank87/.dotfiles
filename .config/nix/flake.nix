@@ -90,6 +90,7 @@
                   ".zshrc".source = "${dotfiles}/.zshrc";
                   ".config/starship".source = "${dotfiles}/.config/starship";
                   ".config/neofetch".source = "${dotfiles}/.config/neofetch";
+                  ".config/nerdfetch".source = "${dotfiles}/.config/nerdfetch";
                   ".config/kitty".source = "${dotfiles}/.config/kitty";
                   ".config/ghostty".source = "${dotfiles}/.config/ghostty";
                   ".config/nushell".source = "${dotfiles}/.config/nushell";

@@ -1,0 +1,196 @@
+#!/usr/bin/env bash
+# Custom nerdfetch-style fetch, field layout mirrored from ~/.config/neofetch/config.conf
+# Stock nerdfetch has no config file — this is the configurable replacement.
+
+set -euo pipefail
+
+bold=$'\033[1m'
+reset=$'\033[0m'
+black=$'\033[30m'
+red=$'\033[31m'
+green=$'\033[32m'
+yellow=$'\033[33m'
+blue=$'\033[34m'
+magenta=$'\033[35m'
+cyan=$'\033[36m'
+white=$'\033[37m'
+grey=$'\033[90m'
+
+lc="${reset}${bold}${magenta}" # labels
+nc="${reset}${bold}${yellow}"  # user
+hn="${reset}${bold}${blue}"    # hostname
+ic="${reset}${green}"          # info
+c0="${reset}${grey}"
+c1="${reset}${white}"
+c2="${reset}${yellow}"
+
+# Icons (Nerd Font)
+i_os=""
+i_host="󰌢"
+i_kernel=""
+i_uptime="󰅶"
+i_pkgs="󰏔"
+i_shell=""
+i_theme="󰉼"
+i_icons="󰀻"
+i_term=""
+i_font=""
+i_cpu=""
+i_gpu="󰢮"
+i_mem="󰍛"
+i_batt="󰂄"
+
+user="$(whoami)"
+host="$(hostname -s)"
+
+os="$(sw_vers -productName) $(sw_vers -productVersion) $(uname -m)"
+model="$(sysctl -n hw.model 2>/dev/null || true)"
+if command -v system_profiler >/dev/null 2>&1; then
+  pretty_model="$(system_profiler SPHardwareDataType 2>/dev/null | awk -F': ' '/Model Name/{print $2; exit}')"
+  [[ -n "${pretty_model:-}" ]] && model="$pretty_model"
+fi
+kernel="$(uname -r)"
+
+# Uptime (short, matches neofetch uptime_shorthand=on)
+boot="$(sysctl -n kern.boottime 2>/dev/null | awk -F'[=,]' '{print $2}')"
+now="$(date +%s)"
+s=$((now - boot))
+d=$((s / 86400)); h=$((s % 86400 / 3600)); m=$((s % 3600 / 60))
+uptime=""
+(( d > 0 )) && uptime+="${d} day$([ "$d" -gt 1 ] && echo s), " || true
+(( h > 0 )) && uptime+="${h} hour$([ "$h" -gt 1 ] && echo s), " || true
+(( m > 0 || ${#uptime} == 0 )) && uptime+="${m} min$([ "$m" -ne 1 ] && echo s)" || true
+uptime="${uptime%, }"
+
+# Packages (brew + nix-system, mirrors neofetch package_managers=on)
+pkgs=()
+if command -v brew >/dev/null 2>&1; then
+  brew_count="$(brew list --formula 2>/dev/null | wc -l | tr -d ' ')"
+  pkgs+=("${brew_count} (brew)")
+fi
+if [[ -L /run/current-system/sw ]]; then
+  nix_count="$(find -L /run/current-system/sw/bin -maxdepth 1 -type f 2>/dev/null | wc -l | tr -d ' ')"
+  pkgs+=("${nix_count} (nix-system)")
+elif command -v nix-env >/dev/null 2>&1; then
+  nix_count="$(nix-env -q 2>/dev/null | wc -l | tr -d ' ')"
+  [[ "$nix_count" -gt 0 ]] && pkgs+=("${nix_count} (nix-env)")
+fi
+if ((${#pkgs[@]})); then
+  packages="$(printf '%s, ' "${pkgs[@]}")"
+  packages="${packages%, }"
+else
+  packages="0"
+fi
+
+shell_name="$(basename "${SHELL:-zsh}")"
+shell_ver=""
+case "$shell_name" in
+  zsh) shell_ver="$(zsh --version 2>/dev/null | awk '{print $2}')" ;;
+  bash) shell_ver="${BASH_VERSION%%(*}" ;;
+esac
+shell_out="$shell_name${shell_ver:+ $shell_ver}"
+
+# Theme / icons (macOS)
+appearance="Light"
+defaults read -g AppleInterfaceStyle >/dev/null 2>&1 && appearance="Dark"
+theme="Aqua [${appearance}]"
+icons="Apple"
+
+# Terminal
+term="${TERM_PROGRAM:-${TERM:-unknown}}"
+case "$term" in
+  WarpTerminal) term="WarpTerminal" ;;
+  iTerm.app) term="iTerm2" ;;
+  Apple_Terminal) term="Apple Terminal" ;;
+  ghostty) term="Ghostty" ;;
+  kitty) term="kitty" ;;
+esac
+
+term_font="unknown"
+case "${TERM_PROGRAM:-}" in
+  WarpTerminal)
+    # Warp doesn't expose font via a simple plist; fall back to common default
+    term_font="Hack Nerd Font"
+    ;;
+  Apple_Terminal)
+    term_font="$(osascript -e 'tell application "Terminal" to font name of window 1' 2>/dev/null || echo unknown)"
+    ;;
+  kitty)
+    if [[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/kitty/kitty.conf" ]]; then
+      term_font="$(awk '/^font_family/{ $1=""; print substr($0,2); exit }' "${XDG_CONFIG_HOME:-$HOME/.config}/kitty/kitty.conf")"
+    fi
+    ;;
+  ghostty)
+    if [[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/ghostty/config" ]]; then
+      term_font="$(awk -F'=' '/^font-family/{gsub(/^ +| +$/,"",$2); print $2; exit}' "${XDG_CONFIG_HOME:-$HOME/.config}/ghostty/config")"
+    fi
+    ;;
+esac
+[[ -z "$term_font" ]] && term_font="unknown"
+
+cpu="$(sysctl -n machdep.cpu.brand_string 2>/dev/null || echo unknown)"
+gpu="$cpu"
+if command -v system_profiler >/dev/null 2>&1; then
+  gpu_line="$(system_profiler SPDisplaysDataType 2>/dev/null | awk -F': ' '/Chipset Model/{print $2; exit}')"
+  [[ -n "${gpu_line:-}" ]] && gpu="$gpu_line"
+fi
+
+# Memory in GiB with percent (matches neofetch memory_unit=gib, memory_percent=on)
+mem_full_mib=$(( $(sysctl -n hw.memsize) / 1024 / 1024 ))
+# Prefer memory_pressure when available; fall back to wired+active+compressed
+if mem_used_mib="$(memory_pressure 2>/dev/null | awk -F'[: ]+' '/Pages used by apps/{print int($NF*16/1024); exit}')" \
+  && [[ -n "$mem_used_mib" && "$mem_used_mib" -gt 0 ]]; then
+  :
+else
+  pages="$(vm_stat | awk '
+    /Pages active/ {a+=$NF}
+    /Pages wired down/ {a+=$NF}
+    /Pages occupied by compressor/ {a+=$NF}
+    END { gsub(/\./,"",a); print a+0 }
+  ')"
+  page_size="$(sysctl -n vm.pagesize)"
+  mem_used_mib=$(( pages * page_size / 1024 / 1024 ))
+fi
+(( mem_used_mib > mem_full_mib )) && mem_used_mib=$mem_full_mib || true
+mem_used_gib="$(awk -v u="$mem_used_mib" 'BEGIN{printf "%.2f", u/1024}')"
+mem_full_gib="$(awk -v t="$mem_full_mib" 'BEGIN{printf "%.2f", t/1024}')"
+mem_pct=$(( mem_used_mib * 100 / mem_full_mib ))
+memory="${mem_used_gib}GiB / ${mem_full_gib}GiB (${mem_pct}%)"
+
+# Battery
+battery="N/A"
+if command -v pmset >/dev/null 2>&1; then
+  batt_line="$(pmset -g batt 2>/dev/null | awk '/InternalBattery/{print; exit}')"
+  if [[ -n "$batt_line" ]]; then
+    pct="$(printf '%s\n' "$batt_line" | grep -Eo '[0-9]+%' | head -1)"
+    state="$(printf '%s\n' "$batt_line" | sed -E 's/.*%;[[:space:]]*//; s/;.*//; s/^[[:space:]]+|[[:space:]]+$//g')"
+    if [[ -n "$pct" ]]; then
+      battery="$pct"
+      [[ -n "$state" ]] && battery="$pct [$state]"
+    fi
+  fi
+fi
+
+info() {
+  printf '%s  %s%s%s\n' "$1" "$ic" "$2" "$reset"
+}
+
+printf '\n'
+printf '%s%s%s%s@%s%s%s\n' "$nc" "$user" "$red" "$reset" "$hn" "$host" "$reset"
+printf '%s%s\n' "$c0" "-----------------"
+info "$i_os"     "OS: $os"
+info "$i_host"   "Host: $model"
+info "$i_kernel" "Kernel: $kernel"
+info "$i_uptime" "Uptime: $uptime"
+info "$i_pkgs"   "Packages: $packages"
+info "$i_shell"  "Shell: $shell_out"
+info "$i_theme"  "Theme: $theme"
+info "$i_icons"  "Icons: $icons"
+info "$i_term"   "Terminal: $term"
+info "$i_font"   "Terminal Font: $term_font"
+info "$i_cpu"    "CPU: $cpu"
+info "$i_gpu"    "GPU: $gpu"
+info "$i_mem"    "Memory: $memory"
+info "$i_batt"   "Battery: $battery"
+printf '\n%s%s%s%s%s%s%s%s%s%s%s%s%s\n\n' \
+  "$red" "███" "$green" "███" "$yellow" "███" "$blue" "███" "$magenta" "███" "$cyan" "███" "$reset"
