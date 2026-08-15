@@ -106,4 +106,4 @@ echo "✅ Nix rebuild complete!"
 eval $(thefuck --alias)
 eval $(thefuck --alias fk)
 
-neofetch
+nerdfetch

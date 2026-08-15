@@ -69,7 +69,7 @@
       "ntfy"
       "pandoc"
       "starship"
-      "neofetch"
+      "nerdfetch"
       "zoxide"
       "go"
       "rust"
