@@ -171,26 +171,65 @@ if command -v pmset >/dev/null 2>&1; then
   fi
 fi
 
-info() {
-  printf '%s  %s%s%s\n' "$1" "$ic" "$2" "$reset"
-}
+# Classic macOS Apple logo (neofetch rainbow bands)
+# top 5 green → 2 yellow → 4 red → 2 pink → remaining blue
+g="${reset}${bold}${green}"
+y="${reset}${bold}${yellow}"
+r="${reset}${bold}${red}"
+p="${reset}${bold}"$'\033[38;5;205m'  # pink
+b="${reset}${bold}${blue}"
+logo=(
+"${g}                    'c.          ${reset}"
+"${g}                 ,xNMM.          ${reset}"
+"${g}               .OMMMMo           ${reset}"
+"${g}               OMMM0,            ${reset}"
+"${g}     .;loddo:' loolloddol;.      ${reset}"
+"${y}   cKMMMMMMMMMMNWMMMMMMMMMM0:    ${reset}"
+"${y} .KMMMMMMMMMMMMMMMMMMMMMMMWd.    ${reset}"
+"${r} XMMMMMMMMMMMMMMMMMMMMMMMX.      ${reset}"
+"${r};MMMMMMMMMMMMMMMMMMMMMMMM:       ${reset}"
+"${r}:MMMMMMMMMMMMMMMMMMMMMMMM:       ${reset}"
+"${r}.MMMMMMMMMMMMMMMMMMMMMMMMX.      ${reset}"
+"${p} kMMMMMMMMMMMMMMMMMMMMMMMMWd.    ${reset}"
+"${p} .XMMMMMMMMMMMMMMMMMMMMMMMMMMk   ${reset}"
+"${b}  .XMMMMMMMMMMMMMMMMMMMMMMMMK.   ${reset}"
+"${b}    kMMMMMMMMMMMMMMMMMMMMMMd     ${reset}"
+"${b}     ;KMMMMMMMWXXWMMMMMMMk.      ${reset}"
+"${b}       .cooc,.    .,coo:.        ${reset}"
+)
+
+title="${nc}${user}${red}@${reset}${hn}${host}${reset}"
+underline="${c0}$(printf '%.0s-' $(seq 1 $((${#user} + 1 + ${#host}))))${reset}"
+
+infos=(
+  "$title"
+  "$underline"
+  "${lc}${i_os}${reset}  ${ic}OS: $os${reset}"
+  "${lc}${i_host}${reset}  ${ic}Host: $model${reset}"
+  "${lc}${i_kernel}${reset}  ${ic}Kernel: $kernel${reset}"
+  "${lc}${i_uptime}${reset}  ${ic}Uptime: $uptime${reset}"
+  "${lc}${i_pkgs}${reset}  ${ic}Packages: $packages${reset}"
+  "${lc}${i_shell}${reset}  ${ic}Shell: $shell_out${reset}"
+  "${lc}${i_theme}${reset}  ${ic}Theme: $theme${reset}"
+  "${lc}${i_icons}${reset}  ${ic}Icons: $icons${reset}"
+  "${lc}${i_term}${reset}  ${ic}Terminal: $term${reset}"
+  "${lc}${i_font}${reset}  ${ic}Terminal Font: $term_font${reset}"
+  "${lc}${i_cpu}${reset}  ${ic}CPU: $cpu${reset}"
+  "${lc}${i_gpu}${reset}  ${ic}GPU: $gpu${reset}"
+  "${lc}${i_mem}${reset}  ${ic}Memory: $memory${reset}"
+  "${lc}${i_batt}${reset}  ${ic}Battery: $battery${reset}"
+  ""
+  "${red}███${green}███${yellow}███${blue}███${magenta}███${cyan}███${reset}"
+)
 
 printf '\n'
-printf '%s%s%s%s@%s%s%s\n' "$nc" "$user" "$red" "$reset" "$hn" "$host" "$reset"
-printf '%s%s\n' "$c0" "-----------------"
-info "$i_os"     "OS: $os"
-info "$i_host"   "Host: $model"
-info "$i_kernel" "Kernel: $kernel"
-info "$i_uptime" "Uptime: $uptime"
-info "$i_pkgs"   "Packages: $packages"
-info "$i_shell"  "Shell: $shell_out"
-info "$i_theme"  "Theme: $theme"
-info "$i_icons"  "Icons: $icons"
-info "$i_term"   "Terminal: $term"
-info "$i_font"   "Terminal Font: $term_font"
-info "$i_cpu"    "CPU: $cpu"
-info "$i_gpu"    "GPU: $gpu"
-info "$i_mem"    "Memory: $memory"
-info "$i_batt"   "Battery: $battery"
-printf '\n%s%s%s%s%s%s%s%s%s%s%s%s%s\n\n' \
-  "$red" "███" "$green" "███" "$yellow" "███" "$blue" "███" "$magenta" "███" "$cyan" "███" "$reset"
+logo_count=${#logo[@]}
+info_count=${#infos[@]}
+rows=$(( logo_count > info_count ? logo_count : info_count ))
+blank_logo="                                   "
+for ((i = 0; i < rows; i++)); do
+  left="${logo[i]:-$blank_logo}"
+  right="${infos[i]:-}"
+  printf '%s%s\n' "$left" "$right"
+done
+printf '%s\n' "$reset"
